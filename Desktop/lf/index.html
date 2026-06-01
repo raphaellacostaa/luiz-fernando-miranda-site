@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8" />
@@ -150,8 +150,8 @@ a:focus-visible,button:focus-visible{
 .lfm-mark .ltr{display:inline-block;color:transparent;-webkit-background-clip:text;background-clip:text;background-image:linear-gradient(150deg,#f7ead0 0%,#e4cd97 20%,#c2a062 42%,#f0ddae 60%,#bd9858 80%,#a37e49 100%)}
 .lfm-mark .f{margin-left:-.10em}
 .lfm-mark .m{margin-left:-.07em}
-.lfm-mark--ink .ltr{background-image:linear-gradient(150deg,#2a241c,#141414 60%,#3a2f22)}
-.lfm-mark--ink .f{background-image:linear-gradient(150deg,#9a7b45,#6f5836)}
+.lfm-mark--ink .ltr{background-image:linear-gradient(150deg,#141414,#141414)}
+.lfm-mark--ink .f{background-image:linear-gradient(150deg,#141414,#141414)}
 .brand-mono{font-size:33px}
 .footer-mono{font-size:56px;margin-bottom:20px}
 .brand-name{
@@ -261,16 +261,15 @@ a:focus-visible,button:focus-visible{
 
 .hero{
   position:relative;
-  min-height:860px;
-  height:100vh;
-  max-height:920px;
-  padding-top:108px;
-  padding-bottom:34px;
+  min-height:auto;
+  height:auto;
+  padding-top:130px;
+  padding-bottom:60px;
   color:var(--paper);
   overflow:hidden;
   isolation:isolate;
   display:flex;
-  align-items:flex-end;
+  align-items:center;
 }
 .hero-bg{
   position:absolute;
@@ -282,8 +281,8 @@ a:focus-visible,button:focus-visible{
     linear-gradient(180deg,rgba(0,0,0,.08) 0%,rgba(0,0,0,.24) 70%,rgba(0,0,0,.72) 100%),
     url("banner.png");
   background-repeat:no-repeat;
-  background-position:center, center, right 8%;
-  background-size:cover, cover, auto 90%;
+  background-position:center, center, right 15%;
+  background-size:cover, cover, cover;
 }
 .hero-grain{
   position:absolute;
@@ -338,9 +337,9 @@ a:focus-visible,button:focus-visible{
 }
 .hero h1 .it{
   display:inline-block;
-  font-style:italic;
-  font-weight:400;
-  color:var(--gold-soft);
+  font-style:normal;
+  font-weight:700;
+  color:var(--paper);
 }
 .hero-sub{
   max-width:590px;
@@ -359,7 +358,7 @@ a:focus-visible,button:focus-visible{
 }
 .hero-cards{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(3,1fr);
   gap:16px;
   width:100%;
 }
@@ -1218,10 +1217,7 @@ a:focus-visible,button:focus-visible{
   .nav,.header-cta{display:none}
   .menu-toggle{display:flex}
   .hero{
-    height:auto;
-    max-height:none;
-    min-height:740px;
-    padding-top:118px;
+    padding-top:110px;
     padding-bottom:46px;
   }
   .hero-bg{
@@ -1230,7 +1226,7 @@ a:focus-visible,button:focus-visible{
       linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.68)),
       url("banner.png") center/cover no-repeat;
   }
-  .hero-cards{grid-template-columns:repeat(2,1fr)}
+  .hero-cards{grid-template-columns:repeat(3,1fr)}
   .hero-credentials{grid-template-columns:1fr 1fr 1fr}
   .section-head,.sobre-grid,.traj-wrap,.contact-grid{grid-template-columns:1fr;gap:52px}
   .sobre-figure{height:500px;max-width:560px}
@@ -1248,9 +1244,8 @@ a:focus-visible,button:focus-visible{
   .brand-name{font-size:15px}
   .brand-tag{font-size:9px;letter-spacing:.12em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:170px}
   .hero{
-    min-height:auto;
-    padding-top:104px;
-    padding-bottom:28px;
+    padding-top:96px;
+    padding-bottom:36px;
   }
   /* Imagem de fundo otimizada para mobile */
   .hero-bg{
@@ -1375,10 +1370,9 @@ a:focus-visible,button:focus-visible{
       </h1>
 
       <p class="hero-sub hero-anim" data-i18n="hero.sub">
-        Professor de Ciência Política da Universidade Federal do Pará (UFPA) e vice-presidente
-        da Transparência Brasil. Doutor em Ciência Política, pesquisador, escritor e poeta,
-        produz análises sobre democracia, instituições, corrupção, transparência e accountability
-        no Brasil contemporâneo.
+        Professor e pesquisador de Ciência Política da Universidade Federal do Pará (UFPA), membro da
+        Transparência Brasil, doutor em Ciência Política, produz análises sobre democracia,
+        instituições, corrupção, transparência e accountability com foco no Brasil e na América Latina.
       </p>
 
       <div class="hero-cta hero-anim">
@@ -1392,20 +1386,6 @@ a:focus-visible,button:focus-visible{
         </a>
       </div>
 
-      <div class="hero-credentials hero-anim">
-        <div class="cred-item">
-          <div class="num">UFPA</div>
-          <div class="lbl" data-i18n="hero.cred1">Professor de Ciência Política · FACS & PPGCP</div>
-        </div>
-        <div class="cred-item">
-          <div class="num">TB</div>
-          <div class="lbl" data-i18n="hero.cred2">Vice-presidente · Transparência Brasil</div>
-        </div>
-        <div class="cred-item">
-          <div class="num">PhD</div>
-          <div class="lbl" data-i18n="hero.cred3">Doutor em Ciência Política · UFF</div>
-        </div>
-      </div>
     </div>
 
     <div class="hero-cards hero-anim" aria-label="Destaques profissionais">
@@ -1414,7 +1394,7 @@ a:focus-visible,button:focus-visible{
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V8l8-4 8 4v12"/><path d="M4 20h16"/><path d="M9 20v-8h6v8"/></svg>
         </span>
         <span>
-          <span class="hcard-title" data-i18n="hcard.1.title">Professor da UFPA</span>
+          <span class="hcard-title" data-i18n="hcard.1.title">UFPA</span>
           <span class="hcard-text" data-i18n="hcard.1.text">Docência e pesquisa em Ciência Política.</span>
         </span>
       </a>
@@ -1424,7 +1404,7 @@ a:focus-visible,button:focus-visible{
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v6c0 5-3.5 8-8 8s-8-3-8-8V7l8-4z"/><path d="M9 12l2 2 4-5"/></svg>
         </span>
         <span>
-          <span class="hcard-title" data-i18n="hcard.2.title">Vice-presidente — TB</span>
+          <span class="hcard-title" data-i18n="hcard.2.title">Transparência Brasil</span>
           <span class="hcard-text" data-i18n="hcard.2.text">Transparência, integridade e controle social.</span>
         </span>
       </a>
@@ -1434,18 +1414,8 @@ a:focus-visible,button:focus-visible{
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h10l4 4v12H4z"/><path d="M14 4v4h4"/><path d="M8 13h6M8 17h4"/></svg>
         </span>
         <span>
-          <span class="hcard-title" data-i18n="hcard.3.title">Produção acadêmica</span>
+          <span class="hcard-title" data-i18n="hcard.3.title">Produção acadêmica & Mídia</span>
           <span class="hcard-text" data-i18n="hcard.3.text">Artigos, capítulos, pesquisa e debate público.</span>
-        </span>
-      </a>
-
-      <a class="hcard" href="https://www.instagram.com/luizfmir" target="_blank" rel="noopener">
-        <span class="hcard-ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2"/><path d="M8 7h6M8 11h8"/></svg>
-        </span>
-        <span>
-          <span class="hcard-title" data-i18n="hcard.4.title">Escrita literária</span>
-          <span class="hcard-text" data-i18n="hcard.4.text">Poesia, reflexão social e produção autoral.</span>
         </span>
       </a>
     </div>
@@ -1918,15 +1888,14 @@ a:focus-visible,button:focus-visible{
       'brand.tag': 'Cientista Político',
       'nav.about': 'Sobre', 'nav.work': 'Atuação', 'nav.trajectory': 'Trajetória',
       'nav.production': 'Produção', 'nav.contact': 'Contato', 'nav.cta': 'Entrar em contato',
-      'hero.sub': 'Professor de Ciência Política da Universidade Federal do Pará (UFPA) e vice-presidente da Transparência Brasil. Doutor em Ciência Política, pesquisador, escritor e poeta, produz análises sobre democracia, instituições, corrupção, transparência e accountability no Brasil contemporâneo.',
+      'hero.sub': 'Professor e pesquisador de Ciência Política da Universidade Federal do Pará, membro da Transparência Brasil, doutor em Ciência Política, produz análises sobre democracia, instituições, corrupção, transparência e accountability com foco no Brasil e na América Latina.',
       'hero.cta1': 'Entrar em contato', 'hero.cta2': 'Conhecer trajetória',
       'hero.cred1': 'Professor de Ciência Política · FACS & PPGCP',
       'hero.cred2': 'Vice-presidente · Transparência Brasil',
       'hero.cred3': 'Doutor em Ciência Política · UFF',
-      'hcard.1.title': 'Professor da UFPA', 'hcard.1.text': 'Docência e pesquisa em Ciência Política.',
-      'hcard.2.title': 'Vice-presidente — TB', 'hcard.2.text': 'Transparência, integridade e controle social.',
-      'hcard.3.title': 'Produção acadêmica', 'hcard.3.text': 'Artigos, capítulos, pesquisa e debate público.',
-      'hcard.4.title': 'Escrita literária', 'hcard.4.text': 'Poesia, reflexão social e produção autoral.',
+      'hcard.1.title': 'UFPA', 'hcard.1.text': 'Docência e pesquisa em Ciência Política.',
+      'hcard.2.title': 'Transparência Brasil', 'hcard.2.text': 'Transparência, integridade e controle social.',
+      'hcard.3.title': 'Produção acadêmica & Mídia', 'hcard.3.text': 'Artigos, capítulos, pesquisa e debate público.',
       'about.eyebrow': 'Sobre · Biografia',
       'about.title': 'Autoridade acadêmica,<br><span class="it">análise pública</span> e escrita.',
       'about.p1': 'Luiz Fernando Miranda é professor de Ciência Política na Universidade Federal do Pará (UFPA), atuando na Faculdade de Ciências Sociais e no Programa de Pós-Graduação em Ciência Política. É doutor em Ciência Política pela Universidade Federal Fluminense (UFF).',
@@ -1991,15 +1960,14 @@ a:focus-visible,button:focus-visible{
       'brand.tag': 'Political Scientist',
       'nav.about': 'About', 'nav.work': 'Work', 'nav.trajectory': 'Career',
       'nav.production': 'Publications', 'nav.contact': 'Contact', 'nav.cta': 'Get in touch',
-      'hero.sub': 'Professor of Political Science at the Federal University of Pará (UFPA) and Vice-President of Transparência Brasil. PhD in Political Science, researcher, writer and poet, producing analyses on democracy, institutions, corruption, transparency and accountability in contemporary Brazil.',
+      'hero.sub': 'Professor and researcher of Political Science at the Federal University of Pará, member of Transparência Brasil, PhD in Political Science, producing analyses on democracy, institutions, corruption, transparency and accountability with a focus on Brazil and Latin America.',
       'hero.cta1': 'Get in touch', 'hero.cta2': 'View career',
       'hero.cred1': 'Professor of Political Science · FACS & PPGCP',
       'hero.cred2': 'Vice-President · Transparência Brasil',
       'hero.cred3': 'PhD in Political Science · UFF',
-      'hcard.1.title': 'UFPA Professor', 'hcard.1.text': 'Teaching and research in Political Science.',
-      'hcard.2.title': 'Vice-President — TB', 'hcard.2.text': 'Transparency, integrity and social oversight.',
-      'hcard.3.title': 'Academic output', 'hcard.3.text': 'Articles, chapters, research and public debate.',
-      'hcard.4.title': 'Literary writing', 'hcard.4.text': 'Poetry, social reflection and authored work.',
+      'hcard.1.title': 'UFPA', 'hcard.1.text': 'Teaching and research in Political Science.',
+      'hcard.2.title': 'Transparência Brasil', 'hcard.2.text': 'Transparency, integrity and social oversight.',
+      'hcard.3.title': 'Academic output & Media', 'hcard.3.text': 'Articles, chapters, research and public debate.',
       'about.eyebrow': 'About · Biography',
       'about.title': 'Academic authority,<br><span class="it">public analysis</span> and writing.',
       'about.p1': 'Luiz Fernando Miranda is a Professor of Political Science at the Federal University of Pará (UFPA), working at the Faculty of Social Sciences and the Graduate Program in Political Science. He holds a PhD in Political Science from the Fluminense Federal University (UFF).',

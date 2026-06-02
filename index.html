@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8" />
@@ -282,8 +282,8 @@ a:focus-visible,button:focus-visible{
     linear-gradient(180deg,rgba(0,0,0,.08) 0%,rgba(0,0,0,.24) 70%,rgba(0,0,0,.72) 100%),
     url("banner.png");
   background-repeat:no-repeat;
-  background-position:center, center, right top;
-  background-size:cover, cover, cover;
+  background-position:center, center, 80% top;
+  background-size:cover, cover, 130% auto;
 }
 .hero-grain{
   position:absolute;
@@ -330,7 +330,7 @@ a:focus-visible,button:focus-visible{
 }
 .hero-eyebrow .line{width:44px;height:1px;background:var(--gold-soft);flex:0 0 auto}
 .hero h1{
-  font-size:clamp(58px,7.9vw,116px);
+  font-size:clamp(42px,5.2vw,80px);
   line-height:.92;
   font-weight:700;
   color:var(--paper);
@@ -465,26 +465,18 @@ a:focus-visible,button:focus-visible{
 .sobre-grid{
   display:grid;
   grid-template-columns:.92fr 1.08fr;
-  gap:86px;
-  align-items:center;
+  gap:72px;
+  align-items:stretch;
 }
 .sobre-figure{
   position:relative;
-  height:560px;
+  min-height:560px;
   border-radius:34px;
   overflow:hidden;
-  background:#111;
+  background:url("sobre.png") center top/cover no-repeat;
   box-shadow:0 34px 80px -38px rgba(20,20,20,.45);
 }
-.sobre-img{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center top;
-  display:block;
-}
+.sobre-img{display:none}
 .sobre-figure::after{
   content:"";
   position:absolute;
@@ -520,8 +512,8 @@ a:focus-visible,button:focus-visible{
   color:var(--gold-deep);
 }
 .sobre h2{
-  margin:24px 0 30px;
-  font-size:clamp(38px,5vw,64px);
+  margin:18px 0 22px;
+  font-size:clamp(28px,3.4vw,48px);
 }
 .sobre h2 .it{font-style:italic;color:var(--gold);font-weight:400}
 .sobre-text{
@@ -534,9 +526,9 @@ a:focus-visible,button:focus-visible{
 .sobre-list{
   list-style:none;
   padding:0;
-  margin:34px 0;
+  margin:22px 0;
   display:grid;
-  gap:14px;
+  gap:10px;
 }
 .sobre-list li{
   display:flex;
@@ -1371,9 +1363,14 @@ a:focus-visible,button:focus-visible{
       </h1>
 
       <p class="hero-sub hero-anim" data-i18n="hero.sub">
-        Professor e pesquisador de Ciência Política da Universidade Federal do Pará (UFPA), membro da
+        Professor e pesquisador de Ciência Política da Universidade Federal do Pará, membro da
         Transparência Brasil, doutor em Ciência Política, produz análises sobre democracia,
-        instituições, corrupção, transparência e accountability com foco no Brasil e na América Latina.
+        instituições, corrupção, anti-corrupção, transparência e accountability com foco no Brasil e na América Latina.
+      </p>
+
+      <p class="hero-sub hero-anim" style="margin-top:-10px" data-i18n="hero.sub2">
+        Sua trajetória conecta pesquisa acadêmica, debate político, análise institucional e produção
+        literária. Tem se dedicado especialmente a estudar a agenda anti-corrupção, transparência e integridade.
       </p>
 
       <div class="hero-cta hero-anim">
@@ -1388,42 +1385,10 @@ a:focus-visible,button:focus-visible{
       </div>
 
     </div>
-
-    <div class="hero-cards hero-anim" aria-label="Destaques profissionais">
-      <a class="hcard" href="#sobre">
-        <span class="hcard-ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V8l8-4 8 4v12"/><path d="M4 20h16"/><path d="M9 20v-8h6v8"/></svg>
-        </span>
-        <span>
-          <span class="hcard-title" data-i18n="hcard.1.title">UFPA</span>
-          <span class="hcard-text" data-i18n="hcard.1.text">Docência e pesquisa em Ciência Política.</span>
-        </span>
-      </a>
-
-      <a class="hcard" href="#trajetoria">
-        <span class="hcard-ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v6c0 5-3.5 8-8 8s-8-3-8-8V7l8-4z"/><path d="M9 12l2 2 4-5"/></svg>
-        </span>
-        <span>
-          <span class="hcard-title" data-i18n="hcard.2.title">Transparência Brasil</span>
-          <span class="hcard-text" data-i18n="hcard.2.text">Transparência, integridade e controle social.</span>
-        </span>
-      </a>
-
-      <a class="hcard" href="#producao">
-        <span class="hcard-ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h10l4 4v12H4z"/><path d="M14 4v4h4"/><path d="M8 13h6M8 17h4"/></svg>
-        </span>
-        <span>
-          <span class="hcard-title" data-i18n="hcard.3.title">Produção acadêmica & Mídia</span>
-          <span class="hcard-text" data-i18n="hcard.3.text">Artigos, capítulos, pesquisa e debate público.</span>
-        </span>
-      </a>
-    </div>
   </div>
 </section>
 
-<section class="section section-light sobre" id="sobre">
+<section class="section section-light sobre" id="sobre" style="padding-top:70px">
   <div class="wrap">
     <div class="sobre-grid">
       <figure class="sobre-figure">
@@ -1439,26 +1404,16 @@ a:focus-visible,button:focus-visible{
         <h2 data-i18n="about.title">Autoridade acadêmica,<br><span class="it">análise pública</span> e escrita.</h2>
 
         <p class="sobre-text" data-i18n="about.p1">
-          Luiz Fernando Miranda é professor de Ciência Política na Universidade Federal do Pará (UFPA),
-          atuando na Faculdade de Ciências Sociais e no Programa de Pós-Graduação em Ciência Política.
-          É doutor em Ciência Política pela Universidade Federal Fluminense (UFF).
-        </p>
-        <p class="sobre-text" data-i18n="about.p2">
-          Também é vice-presidente da Transparência Brasil, organização de referência nacional em
-          integridade pública, transparência, accountability e controle democrático. Integra o Conselho
-          Deliberativo da instituição desde 2021.
-        </p>
-        <p class="sobre-text muted" data-i18n="about.p3">
-          Sua trajetória conecta pesquisa acadêmica, debate público, análise institucional e produção
-          literária. Seu trabalho busca tornar temas complexos da política brasileira mais compreensíveis,
-          sem perder o rigor analítico.
+          Luiz Fernando Miranda é professor de Ciência Política da UFPA, doutor pela UFF e
+          vice-presidente da Transparência Brasil. Dedica-se a pesquisar democracia, corrupção,
+          anti-corrupção, transparência e accountability, com foco no Brasil e na América Latina.
         </p>
 
         <ul class="sobre-list">
           <li><span class="check"><svg viewBox="0 0 11 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2 5.8L4.4 8.2L9 3.3"/></svg></span><span data-i18n="about.li1">Professor de Ciência Política — UFPA, FACS e PPGCP</span></li>
           <li><span class="check"><svg viewBox="0 0 11 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2 5.8L4.4 8.2L9 3.3"/></svg></span><span data-i18n="about.li2">Vice-presidente da Transparência Brasil</span></li>
-          <li><span class="check"><svg viewBox="0 0 11 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2 5.8L4.4 8.2L9 3.3"/></svg></span><span data-i18n="about.li3">Doutor em Ciência Política pela UFF</span></li>
-          <li><span class="check"><svg viewBox="0 0 11 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2 5.8L4.4 8.2L9 3.3"/></svg></span><span data-i18n="about.li4">Pesquisa em corrupção, transparência, instituições e accountability</span></li>
+          <li><span class="check"><svg viewBox="0 0 11 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2 5.8L4.4 8.2L9 3.3"/></svg></span><span data-i18n="about.li3">Doutor em Ciência Política — UFF</span></li>
+          <li><span class="check"><svg viewBox="0 0 11 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2 5.8L4.4 8.2L9 3.3"/></svg></span><span data-i18n="about.li4">Pesquisa em corrupção, anti-corrupção, transparência e accountability</span></li>
         </ul>
 
         <a href="#producao" class="btn btn-outline-dark" data-i18n="about.cta">
@@ -1889,7 +1844,8 @@ a:focus-visible,button:focus-visible{
       'brand.tag': 'Cientista Político',
       'nav.about': 'Sobre', 'nav.work': 'Atuação', 'nav.trajectory': 'Trajetória',
       'nav.production': 'Produção', 'nav.contact': 'Contato', 'nav.cta': 'Entrar em contato',
-      'hero.sub': 'Professor e pesquisador de Ciência Política da Universidade Federal do Pará, membro da Transparência Brasil, doutor em Ciência Política, produz análises sobre democracia, instituições, corrupção, transparência e accountability com foco no Brasil e na América Latina.',
+      'hero.sub': 'Professor e pesquisador de Ciência Política da Universidade Federal do Pará, membro da Transparência Brasil, doutor em Ciência Política, produz análises sobre democracia, instituições, corrupção, anti-corrupção, transparência e accountability com foco no Brasil e na América Latina.',
+      'hero.sub2': 'Sua trajetória conecta pesquisa acadêmica, debate político, análise institucional e produção literária. Tem se dedicado especialmente a estudar a agenda anti-corrupção, transparência e integridade.',
       'hero.cta1': 'Entrar em contato', 'hero.cta2': 'Conhecer trajetória',
       'hero.cred1': 'Professor de Ciência Política · FACS & PPGCP',
       'hero.cred2': 'Vice-presidente · Transparência Brasil',
@@ -1899,13 +1855,13 @@ a:focus-visible,button:focus-visible{
       'hcard.3.title': 'Produção acadêmica & Mídia', 'hcard.3.text': 'Artigos, capítulos, pesquisa e debate público.',
       'about.eyebrow': 'Sobre · Biografia',
       'about.title': 'Autoridade acadêmica,<br><span class="it">análise pública</span> e escrita.',
-      'about.p1': 'Luiz Fernando Miranda é professor de Ciência Política na Universidade Federal do Pará (UFPA), atuando na Faculdade de Ciências Sociais e no Programa de Pós-Graduação em Ciência Política. É doutor em Ciência Política pela Universidade Federal Fluminense (UFF).',
+      'about.p1': 'Luiz Fernando Miranda é professor de Ciência Política da UFPA, doutor pela UFF e vice-presidente da Transparência Brasil. Dedica-se a pesquisar democracia, corrupção, anti-corrupção, transparência e accountability, com foco no Brasil e na América Latina.',
       'about.p2': 'Também é vice-presidente da Transparência Brasil, organização de referência nacional em integridade pública, transparência, accountability e controle democrático. Integra o Conselho Deliberativo da instituição desde 2021.',
       'about.p3': 'Sua trajetória conecta pesquisa acadêmica, debate público, análise institucional e produção literária. Seu trabalho busca tornar temas complexos da política brasileira mais compreensíveis, sem perder o rigor analítico.',
       'about.li1': 'Professor de Ciência Política — UFPA, FACS e PPGCP',
       'about.li2': 'Vice-presidente da Transparência Brasil',
       'about.li3': 'Doutor em Ciência Política pela UFF',
-      'about.li4': 'Pesquisa em corrupção, transparência, instituições e accountability',
+      'about.li4': 'Pesquisa em corrupção, anti-corrupção, transparência e accountability',
       'about.cta': 'Conhecer produção',
       'work.eyebrow': 'Atuação', 'work.title': 'Áreas de<br>trabalho.',
       'work.sub': 'Uma atuação que articula docência, pesquisa, análise institucional, integridade pública e produção literária, aproximando universidade, sociedade civil e debate público.',
@@ -1961,7 +1917,8 @@ a:focus-visible,button:focus-visible{
       'brand.tag': 'Political Scientist',
       'nav.about': 'About', 'nav.work': 'Work', 'nav.trajectory': 'Career',
       'nav.production': 'Publications', 'nav.contact': 'Contact', 'nav.cta': 'Get in touch',
-      'hero.sub': 'Professor and researcher of Political Science at the Federal University of Pará, member of Transparência Brasil, PhD in Political Science, producing analyses on democracy, institutions, corruption, transparency and accountability with a focus on Brazil and Latin America.',
+      'hero.sub': 'Professor and researcher of Political Science at the Federal University of Pará, member of Transparência Brasil, PhD in Political Science, producing analyses on democracy, institutions, corruption, anti-corruption, transparency and accountability with a focus on Brazil and Latin America.',
+      'hero.sub2': 'His career connects academic research, political debate, institutional analysis and literary production. He has dedicated himself especially to studying the anti-corruption, transparency and integrity agenda.',
       'hero.cta1': 'Get in touch', 'hero.cta2': 'View career',
       'hero.cred1': 'Professor of Political Science · FACS & PPGCP',
       'hero.cred2': 'Vice-President · Transparência Brasil',

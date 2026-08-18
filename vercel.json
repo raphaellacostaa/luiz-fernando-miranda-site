@@ -1,0 +1,52 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'sha256-NRyaWdRGvb88sVgqjvRiBhuYRVXriiASFoOL8uLx9yQ=' 'sha256-CsZttmwIRjI8FSLs3OPLYm2tY4o6G0LUmAKZYvdS2OQ=' 'sha256-Xtq2ikwT1a7EUPlOaeShi2pL4uxa2vfU0zB4IGHKGC4=' 'sha256-LCesQIsvYvoUDFoY6uusZ7jpN3SmHmcV5WIfrfRJzpM='; connect-src 'self'; upgrade-insecure-requests"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        }
+      ]
+    },
+    {
+      "source": "/:arquivo(.+).(webp|jpg|jpeg|png|svg|ico)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(llms.txt|robots.txt|sitemap.xml)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    }
+  ]
+}

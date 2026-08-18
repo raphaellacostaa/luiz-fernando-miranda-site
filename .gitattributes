@@ -1,0 +1,14 @@
+# Os hashes SHA-256 do CSP (vercel.json) são calculados sobre o conteúdo dos
+# <script> com quebras LF. Se o git converter para CRLF, nenhum hash bate e os
+# scripts são bloqueados em produção. Este arquivo trava LF, inclusive no Windows.
+*.html  text eol=lf
+*.json  text eol=lf
+*.txt   text eol=lf
+*.xml   text eol=lf
+
+# binários: nunca converter
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.webp  binary
+*.ico   binary

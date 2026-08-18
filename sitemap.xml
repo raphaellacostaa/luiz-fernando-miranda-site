@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Atualizar <lastmod> a cada mudança de conteúdo. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://luiz-fernando-miranda-site.vercel.app/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://luiz-fernando-miranda-site.vercel.app/og-image.jpg</image:loc>
+      <image:title>Luiz Fernando Miranda, professor de Ciência Política</image:title>
+    </image:image>
+  </url>
+</urlset>

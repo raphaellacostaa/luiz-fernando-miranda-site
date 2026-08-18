@@ -55,7 +55,7 @@
 <!-- LCP: o banner do hero é a maior pintura da tela. Preload por breakpoint
      evita baixar a versão desktop (78 KB) em telas pequenas (22 KB). -->
 <link rel="preload" as="image" href="banner.webp" type="image/webp" media="(min-width:701px)" fetchpriority="high">
-<link rel="preload" as="image" href="banner-mobile.webp" type="image/webp" media="(max-width:700px)" fetchpriority="high">
+<link rel="preload" as="image" href="banner-mobile-v2.webp" type="image/webp" media="(max-width:700px)" fetchpriority="high">
 
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <!-- Cormorant só desenha o monograma "LFM": subset de 3 glifos em vez da fonte inteira -->
@@ -1107,19 +1107,24 @@ a:focus-visible, button:focus-visible{
   .brand-name{font-size:15px}
   .brand-tag{font-size:9px;letter-spacing:.12em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:170px}
   .hero{
-    padding-top:96px;
+    /* o texto começa abaixo do queixo: foto = 128vw de altura, queixo a ~40% dela */
+    padding-top:calc(51vw + 100px);
     padding-bottom:36px;
   }
-  /* Imagem de fundo otimizada para mobile: arquivo dedicado de 900px (22 KB) */
+  /* Recorte vertical dedicado (631x809), enquadrado no rosto. O recorte deitado
+     anterior era cortado pelo cover num viewport em pé e o deixava fora do quadro.
+     Aqui a foto é dimensionada pela LARGURA (100% auto), ocupando só a faixa
+     superior; o véu fecha em #0b0908 antes de a imagem terminar, então a borda
+     inferior dela não aparece. */
   .hero-bg{
     background-image:
-      linear-gradient(180deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.55) 40%,rgba(0,0,0,.78) 100%),
-      url("banner-mobile.jpg");
+      linear-gradient(180deg,rgba(0,0,0,.12) 0%,rgba(0,0,0,.26) 22%,rgba(0,0,0,.72) 42%,rgba(0,0,0,.97) 56%,#0b0908 62%,#0b0908 100%),
+      url("banner-mobile-v2.jpg");
     background-image:
-      linear-gradient(180deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.55) 40%,rgba(0,0,0,.78) 100%),
-      image-set(url("banner-mobile.webp") type("image/webp"),url("banner-mobile.jpg") type("image/jpeg"));
+      linear-gradient(180deg,rgba(0,0,0,.12) 0%,rgba(0,0,0,.26) 22%,rgba(0,0,0,.72) 42%,rgba(0,0,0,.97) 56%,#0b0908 62%,#0b0908 100%),
+      image-set(url("banner-mobile-v2.webp") type("image/webp"),url("banner-mobile-v2.jpg") type("image/jpeg"));
     background-position:center,center top;
-    background-size:cover,cover;
+    background-size:cover,100% auto;
   }
   .hero h1{font-size:clamp(50px,15vw,72px)}
   .hero-sub{font-size:15.5px;margin:26px 0}
